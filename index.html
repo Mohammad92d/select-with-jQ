@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <head>
+            <style>
+            .city{display:none;}
+            .USA{display:none;}
+            </style>
+    </head>
+    <body>
+
+    <label>country</label>
+    <select id="country">
+    <option value=1>Jordan</option>
+    <option value=2>USA</option>
+    </select>
+    <label class="city">city</label>
+    <select class="city">
+    <option>Amman</option>
+    <option>Agaba</option>
+    <option>Jarash</option>
+    </select>
+    <label class="USA">State</label>
+    <select class="USA">
+    <option>NY</option>
+    </select>
+    <label class="USA">Zip Code</label>
+    <select class="USA">
+    <option>15454</option>
+    <option>55555</option>
+    </select>
+    <script type="text/javascript">
+    $("#country").change(function(){
+    var con;
+    con=$("#country").val();
+    if (con==1) {
+    $(".city").css("display","inline");
+    $(".USA").css("display","none");
+    }
+    else if (con==2) {
+    $(".USA").css("display","inline");
+    $(".city").css("display","none");
+    }
+    });
+    </script>
+     
+    </body>
+</html>
